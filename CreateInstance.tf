@@ -1,10 +1,13 @@
 provider "aws" {
-  access_key = "AKIAJWH23NQTOMO4LBAQ"
-  secret_key = "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"
+  access_key = "AKIAJ44KCP6LKERUKFXQ"
+  secret_key = "kVuSoMqJ/74jablqhalDrx4qT+5nTk4rTuTL6a8O"
   region     = "us-east-2"
 }
 
 resource "aws_instance" "example" {
   ami           = "ami-618fab04"
   instance_type = "t2.micro"
+  tags {
+    Name = "terraform-example"
+  }
 }
